@@ -48,3 +48,46 @@ const location : readonly [number, number] = [28.66, 32.22]
 // named Tuple
 const items: [name: string, price: number] = ["thing", 25]
 
+enum CupSize {
+    SMALL,
+    MEDIUM,
+    LARGE
+}
+const size = CupSize.LARGE
+
+// Enum ke andr auto increment values bhi hoti hai (don't prefer depends on you)
+enum Status {
+    PENDING = 100,
+    SERVED, //101      (autoincrement)
+    CANCELLED //102
+}
+
+enum ChaiType {
+    MASALA = "masala",
+    GINGER = "ginger",
+}
+
+function makeChai(type:ChaiType){
+    console.log(`Making: ${type}`)
+}
+
+makeChai(ChaiType.GINGER)
+// makeChai("masala") 
+
+
+// not Standard Practice
+enum RandomEnum {
+    ID = 1,
+    NAME = "code"
+}
+
+const enum Sugars{
+    LOW = 1,
+    MEDIUM = 2,
+    HIGH = 3
+}
+
+const s = Sugars.HIGH
+
+let t : [string , number] = ["chai", 10]
+t.push("extra")
